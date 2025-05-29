@@ -1,14 +1,27 @@
-import Link from 'next/link';
+// components/Header.jsx
+import Link from "next/link";
+
 export default function Header() {
+  const sections = ["Home", "Portfolio", "About", "Testimonial", "Contact"];
+
   return (
-    <header className="fixed top-0 w-full bg-white shadow-md z-50">
-      <nav className="container mx-auto flex justify-between items-center p-4">
-        <Link href="/" className="text-xl font-bold">My Portfolio</Link>
-        <div className="space-x-6">
-          {['Home','About','Projects','Tech','Services','Contact'].map((section) => (
-            <a key={section} href={`#${section.toLowerCase()}`} className="hover:text-blue-600">{section}</a>
+    <header className="bg-[#EEE9DB] w-full z-50">
+      <nav className="container mx-auto flex justify-between items-center px-8 py-6">
+        <Link href="/" className="text-2xl font-bold text-[#3F3B37]">
+          AYESHA NAZNEEN
+        </Link>
+        <ul className="flex space-x-8">
+          {sections.map((sec) => (
+            <li key={sec} className="group relative">
+              <a
+                href={`#${sec.toLowerCase()}`}
+                className="text-[#3F3B37] uppercase tracking-wider transition-all duration-300 hover:text-[#2C2926] hover:tracking-widest hover:scale-105"
+              >
+                {sec}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </nav>
     </header>
   );
