@@ -15,7 +15,7 @@ export default function Header() {
             <li key={sec} className="group relative">
               <a
                 href={`#${sec.toLowerCase()}`}
-                className="text-[#EEE9DB] uppercase tracking-wider transition-all duration-300 hover:text-[#2C2926] hover:tracking-widest hover:scale-105"
+                className="text-[#EEE9DB] uppercase tracking-wider transition-all duration-300 hover:text-[#CFC9B5] hover:tracking-widest hover:scale-105"
               >
                 {sec}
               </a>
